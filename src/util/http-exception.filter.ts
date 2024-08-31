@@ -25,7 +25,6 @@ export class AllExceptionsFilter<T> implements ExceptionFilter {
       exception instanceof HttpException
         ? exception.getStatus()
         : HttpStatus.INTERNAL_SERVER_ERROR;
-    // const m = exception.getResponse() as ERR;
 
     const logResponse = {
       message:

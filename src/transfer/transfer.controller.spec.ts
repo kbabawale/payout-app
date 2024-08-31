@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { TransferController } from './transfer.controller';
-import { TransferService } from './transfer.service';
+import { TransferService } from './services/transfer/transfer.service';
 
 describe('TransferController', () => {
   let controller: TransferController;

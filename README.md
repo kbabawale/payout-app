@@ -35,14 +35,31 @@ $ npm install
 ## Running the app
 
 ```bash
-# development
-$ npm run start
+# STEP 1
+Create a new file .env.development and dump these values
 
-# watch mode
-$ npm run start:dev
+SENTRY_URL=https://18e30af49b1406e247e62c18a31a7fdb@o1336285.ingest.us.sentry.io/4507864819433472
+MODE=production
+PORT=3000
+POSTGRES_HOST=aws-0-eu-central-1.pooler.supabase.com
+POSTGRES_USERNAME=postgres.azxkopgsgmsxftzmkchq
+POSTGRES_PASSWORD=vendydatabase12
+POSTGRES_DATABASE=postgres
+POSTGRES_PORT=6543
+POSTGRES_DIALECT=postgres
+MONNIFY_API_KEY=MK_TEST_H57HYXNXQR
+MONNIFY_SECRET_KEY=5FQ08L0PCBPPN1LEYMQW3L2Q8EUFG4RU
+MONNIFY_HOST=https://sandbox.monnify.com/api/v1
+MONNIFY_HOST2=https://sandbox.monnify.com/api/v2
+MONNIFY_ACCOUNT_NUMBER=2463176811
+JWT_SECRET=3kj4ntgfu4n9rf9nedve9rh
 
-# production mode
-$ npm run start:prod
+
+# STEP 2
+
+$ RUN npm run start:dev
+
+
 ```
 
 ## Test

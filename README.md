@@ -59,6 +59,9 @@ JWT_SECRET=3kj4ntgfu4n9rf9nedve9rh
 
 $ RUN npm run start:dev
 
+# STEP 3
+
+$ Navigate to http://localhost:3000/api to view documentation
 
 ```
 

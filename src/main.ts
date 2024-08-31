@@ -17,14 +17,14 @@ async function bootstrap() {
   /**
    * Configuration for Sentry used for logging errors and other possible issues
    */
-  // Sentry.init({
-  //   dsn: configService.get('SENTRY_URL'),
-  //   // Tracing
-  //   tracesSampleRate: 1.0, //  Capture 100% of the transactions
+  Sentry.init({
+    dsn: configService.get('SENTRY_URL'),
+    // Tracing
+    tracesSampleRate: 1.0, //  Capture 100% of the transactions
 
-  //   // Set sampling rate for profiling - this is relative to tracesSampleRate
-  //   profilesSampleRate: 1.0,
-  // });
+    // Set sampling rate for profiling - this is relative to tracesSampleRate
+    profilesSampleRate: 1.0,
+  });
 
   /**
    * Custom headers on every endpoint

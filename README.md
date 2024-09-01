@@ -36,7 +36,7 @@ $ npm install
 
 ```bash
 # STEP 1
-Create a new file .env.development and dump these values
+Create a new file .env and dump these values
 
 SENTRY_URL=https://18e30af49b1406e247e62c18a31a7fdb@o1336285.ingest.us.sentry.io/4507864819433472
 MODE=production

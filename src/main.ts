@@ -9,6 +9,7 @@ import {
 } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { ResponseInterceptor } from './util/http-response.interceptor';
+// import * as fs from 'fs';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -80,7 +81,8 @@ async function bootstrap() {
     )
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('api', app, document, {});
+  // fs.writeFileSync('./swagger-spec.json', JSON.stringify(document));
 
   /**
    * Global configuration for handling endpoints response model

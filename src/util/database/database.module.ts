@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { SequelizeModule } from '@nestjs/sequelize';
+import pg from 'pg';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
         database: configService.get('POSTGRES_DATABASE'),
         autoLoadModels: true,
         synchronize: true,
+        dialectModule: pg,
       }),
       inject: [ConfigService],
     }),

@@ -137,11 +137,6 @@ export class Payout implements IPayout {
         jwtPayload,
         this.config.get('JWT_SECRET'),
       );
-      const refreshtoken = await generateJWT(
-        jwtPayload,
-        this.config.get('JWT_SECRET'),
-        '1y',
-      );
 
       const { password, createdAt, updatedAt, userTypeId, userType, ...rest } =
         user.dataValues;
@@ -150,7 +145,6 @@ export class Payout implements IPayout {
         ...rest,
         type: user.dataValues.userType['name'],
         access_token: accesstoken,
-        refresh_token: refreshtoken,
       };
     }
   }
@@ -163,7 +157,7 @@ export class Payout implements IPayout {
         {
           data: {},
           meta: {},
-          message: 'Error',
+          message: 'Could not process transfer. Try again later.',
         },
         HttpStatus.BAD_REQUEST,
       );

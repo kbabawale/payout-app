@@ -46,7 +46,6 @@ import { JWTStrategy } from './util/jwt/jwt.strategy';
         SENTRY_URL: Joi.string().required(),
       }),
       isGlobal: true,
-      envFilePath: `.env.${process.env.NODE_ENV}`,
     }),
     RouterModule.register(routes),
   ],
